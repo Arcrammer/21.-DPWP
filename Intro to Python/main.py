@@ -31,3 +31,40 @@ birth_year = 1995
 current_year = 2015
 year_difference = current_year - birth_year
 # print("You should be around " + str(year_difference) + " years of age.")
+
+budget = 500
+store = "Tiffany's"
+item = "Rose Gold Necklace"
+
+if budget > 300:
+	# print("Yes Gaga! You can go to %s to get that %s!" %(store, item.lower()))
+	pass
+elif budget > 2000:
+	# print("It looks like you can afford to take a spree up 5th!")
+	pass
+else:
+	# print("Keep saving. Rose gold doesn't mine, smelt, and market itself.")
+	pass
+
+# print("Hello.")
+
+characters = ["Sailor Moon",
+			"Tuxedo Mask",
+			"Sailor Mercury",
+			"Sailor Mars",
+			"Sailor Jupiter",
+			"Sailor Venus",
+			"Sailor Chibi Moon",
+			"Sailor Pluto",
+			"Sailor Uranus",
+			"Sailor Neptune"]
+characters.append("Sailor Saturn")
+# print(characters)
+# print(characters[2])
+
+movies = dict() # Instantiate an empty dictionary
+movies = {
+	"Star Wars":"Darth Vader",
+	"Silence of the Lambs":"Hannibal Lecter"
+}
+# print(movies["Star Wars"])
