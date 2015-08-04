@@ -39,7 +39,7 @@ item = "Rose Gold Necklace"
 if budget > 300:
 	# print("Yes Gaga! You can go to %s to get that %s!" %(store, item.lower()))
 	pass
-elif budget > 2000:
+elif budget > 5000:
 	# print("It looks like you can afford to take a spree up 5th!")
 	pass
 else:
@@ -68,3 +68,51 @@ movies = {
 	"Silence of the Lambs":"Hannibal Lecter"
 }
 # print(movies["Star Wars"])
+
+i = 1
+while i < 11:
+	# print("Iteration #%s" % i)
+	i += 1
+
+for character in characters:
+	# print(character)
+	pass
+
+for number in range(1, 11):
+	# print("Iteration #%s" % number)
+	pass
+
+artists = ["Tori Kelly",
+			"Brandi Carlile",
+			"Marina and the Diamonds",
+			"Lady Gaga",
+			"Mariah Carey",
+			"Mary J. Blige",
+			"Jennifer Hudson"]
+for artist in artists:
+	# print(artist)
+	pass
+
+def findArea(height, width):
+	return height * width
+
+# print("The are of 20 and 40 is %s." % findArea(20, 40))
+
+weight = 170
+height = 64
+message = '''
+You're {height} high and {weight} heavy.
+'''
+message = message.format(**locals())
+page_title = "Very Hacky HTML Page"
+page_content = '''
+<!DOCTYPE html>
+	<head>
+		<title>{page_title}</title>
+	</head>
+	<body>
+		<p>{message}</p>
+	</body>
+</html>
+'''
+print(page_content.format(**locals()))
