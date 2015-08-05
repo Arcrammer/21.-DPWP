@@ -27,12 +27,12 @@ calling_code //= amount_of_times # Reassign the value of 'calling_code' to
 # Set the value of 'old_or_young' with an if
 if age > 30:
 	old_or_young = "old"
-elif age >= 20 || age == 21:
+elif age >= 20 or age == 21:
 	old_or_young = "going old"
 else:
 	old_or_young = "young"
 
-# Dictionary of OS data
+# Dictionary of OS details
 operating_systems = {
 	"Windows": {
 		"Creator":"Microsoft",
@@ -59,10 +59,19 @@ else:
 	os_creator = operating_systems["Ubuntu"]["Creator"]
 	os_creator = operating_systems["Ubuntu"]["Latest Release"]
 
+def findSizeOrSomethingMathematical(one, two, three):
+	# Find volume
+	return one * two * three
+
+# Store the value of 32 * 32 * 23
+size = findSizeOrSomethingMathematical(32, 32, 23)
+
 story = '''
-I was walking through {place} with my {things} when I had suddenly noticed a giant {giant_object} directly in my path. It was seemingly inanimate and unaware of my presence so it continued to {action} without a thought. This particular {giant_object} appeared to be {old_or_young}. It was the most giant {giant_object} within the {calling_code} area code. Why would such a significant and majestic {giant_object} choose to {action} ever-so blissfully unaware of the world around itself? Later that same {time_of_day} I had decided to visit the grocery store because I had completely run out of {grocery_item} the day before -- {person} knows I can't go without my precious {grocery_item}s. However... What I had anticipated to be a lovely shop for {grocery_item}s had turned out to be a nightmare on {street_name} street. Ah! You gave me a fright, sir {person}. My life was forever changed on that day. I decide to {second_action}. I've been told {amount_of_times} times not to do that or I would be arrested. I don't see why it's illegal, but I was still forewarned not to do it again. Never again shall I {second_action}! I must now update my {os_creator} computer. It's still running OS version {os_version}!
+I was walking through {place} with my {things} when I had suddenly noticed a giant {giant_object} directly in my path. It was seemingly inanimate and unaware of my presence so it continued to {action} without a thought. This particular {giant_object} appeared to be {old_or_young}. It was the most giant {giant_object} within the {calling_code} area code. Why would such a significant and majestic {giant_object} choose to {action} ever-so blissfully unaware of the world around itself? Later that same {time_of_day} I had decided to visit the grocery store because I had completely run out of {grocery_item} the day before -- {person} knows I can't go without my precious {grocery_item}s. However... What I had anticipated to be a lovely shop for {grocery_item}s had turned out to be a nightmare on {street_name} street. Ah! You gave me a fright, sir {person}. My life was forever changed on that day. I decide to {second_action}. I've been told {amount_of_times} times not to do that or I would be arrested. I don't see why it's illegal, but I was still forewarned not to do it again. Never again shall I {second_action}! I must now update my {os_creator} computer. It's still running OS version {os_version}! I also need to find a house with a larger garage because my server farm is {size} too small at the moment.
 '''
+
 print(story.format(**locals())) # Write out the story
+
 colours = ["Red","Orange","Yellow","Green","Teal","Blue","Purple","Magenta"]
 print("Which colours are to be found in a rainbow? These:")
 for colour in colours: # For each colour in the array of colours
