@@ -7,10 +7,10 @@
   </head>
   <body>
     <form method="get">
-      <label for="full-name">Full Name: </label><input type="text" name="full_name" id="full-name">
+      <label for="full-name">Full Name: </label><input type="text" name="full_name" id="full-name"><br />
       <label for="cheque">Cheque</label><input type="radio" name="payment_method" id="cheque" value="cheque">
       <label for="card">Card</label><input type="radio" name="payment_method" id="card" value="card">
-      <label for="pp">PayPal</label><input type="radio" name="payment_method" id="pp" value="pp">
+      <label for="pp">PayPal</label><input type="radio" name="payment_method" id="pp" value="pp"><br />
       <label for="record">Record: </label>
       <select name="record" id="record">
         <option value="f">Marina and the Diamonds: Froot</option>
@@ -18,11 +18,11 @@
         <option value="us">Tori Kelly: Unbreakable Smile</option>
         <option value="r">Jordin Sparks: Right Here Right Now</option>
         <option value="p">Kelly Clarkson: Piece by Piece</option>
-      </select> <!-- Record -->
-      <label for="street">Street: </label><input type="text" name="street" id="street">
-      <label for="city">City: </label><input type="text" name="city" id="city">
+      </select> <!-- Record --><br />
+      <label for="street">Street: </label><input type="text" name="street" id="street"><br />
+      <label for="city">City: </label><input type="text" name="city" id="city"><br />
       <label for="state">State: </label>
-      <select name="state">
+      <select name="state" id="state">
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
@@ -74,8 +74,8 @@
         <option value="WV">West Virginia</option>
         <option value="WI">Wisconsin</option>
         <option value="WY">Wyoming</option>
-      </select> <!-- State -->
-      <label for="zip-code">ZIP: </label><input type="text" name="zip_code" id="zip-code">
+      </select> <!-- State --><br />
+      <label for="zip-code">ZIP: </label><input type="text" name="zip_code" id="zip-code"><br />
       <input type="submit" value="Buy">
     </form>
   </body>

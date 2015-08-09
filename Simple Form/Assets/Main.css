@@ -1,3 +1,53 @@
+/*  Main.css
+    Alexander Rhett Crammer
+    Saturday, 8 August, 2015
+    Design Patterns for Web Programming
+    Simple Form  */
+
+/* Structure */
 body {
-  background-color: red;
+  background-color: #8a2be2; /* 'Blueviolet' */
+  margin: 0;
+  padding: 0;
+}
+
+/* Form */
+form {
+  margin: 6.5% auto;
+  text-align: right;
+  width: 30%;
+}
+
+label {
+  color: #fff;
+  font-family: "Helvetica Neue", "Helvetica",sans-serif;
+  font-size: 1.05em;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+
+input, select {
+  background-color: rgba(255,255,255,0.9);
+  border: 2px solid silver;
+  margin: 5px;
+  padding: 10px 15px;
+}
+
+input[type="radio"] {
+  margin-right: 5%;
+}
+
+input[type="submit"] {
+  background-color: #2be2c8;
+  border-color: #31a091;
+  color: #565656;
+  display: block;
+  font-family: "Georgia", serif;
+  font-size: 1em;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin: 10% auto;
+  padding: 15px 40px;
+  text-align: center;
+  width: 45%;
 }
