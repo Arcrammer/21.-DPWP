@@ -24,11 +24,12 @@
 # --------------------------
 #
 import webapp2
-from library import ClassName
+from pages import Welcome
+from library import Device
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        self.response.write(Welcome().render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

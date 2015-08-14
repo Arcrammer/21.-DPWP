@@ -7,6 +7,10 @@
 #   Full Sail University
 # --------------------------
 #
-def Page(object):
+class Welcome(object):
     def __init__(self):
-        pass
+        self.title = "Some Page"
+        self.main_stylesheet_path = "Main.css"
+
+    def render(self):
+        return open("index.html","r").read().format(**locals())
