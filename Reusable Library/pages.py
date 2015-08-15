@@ -14,15 +14,13 @@ class Welcome(object):
 
     def render(self):
         ''' Return the response data '''
-        return open("index.html","r").read().format(**locals())
+        return open("index.html","r").read().format(**locals()) # Interpolate template values and return the result as a string
 
 class DeviceList(object):
     def __init__(self, devices):
         self.title = "Some Page"
         self.main_stylesheet_path = "Main.css"
-        print("Devices --------------------------")
-        print(devices)
 
     def render(self):
         ''' Return the response data '''
-        return open("device_list.html","r").read().format(**locals())
+        return open("device_list.html","r").read().format(**locals()) # Interpolate template values and return the result as a string
