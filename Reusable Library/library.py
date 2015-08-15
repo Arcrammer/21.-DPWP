@@ -45,7 +45,6 @@ class Device(object):
         @property
         def age(self):
             return self.__age
-        
 
         # Setters
         @company.setter
@@ -93,3 +92,19 @@ class DeviceData(object):
             ages.append(device.age) # Add the age of the device to the 'age' array
             total += device.age # Add the age of the device to the 'total' float
         return total / len(ages) # Find the average based on the 'age' and 'total' values and return it
+
+    def device_rows(self):
+        ''' Render an HTML list containing information for each device '''
+        list_source = "" # Empty string; 'tr' elements will be appended later within this method
+        for device in self.__devices:
+            # Each 'Device' object
+            list_source += "<tr>" # Create a 'tr' element
+            list_source += "<td>%s</td>" % (device.company)
+            list_source += "<td>%s</td>" % (device.model)
+            list_source += "<td>%s</td>" % (device.portable)
+            list_source += "<td>%s</td>" % (device.condition)
+            list_source += "<td>%s</td>" % (device.kind)
+            list_source += "<td>%s</td>" % (device.operating_system)
+            list_source += "<td>%s</td>" % (device.age)
+            list_source += "</tr>" # Close the 'tr' element for this device
+        return list_source # Return the rows for all of the devices
