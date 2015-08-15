@@ -46,23 +46,23 @@ class Device(object):
         def company(self, desired_value):
             self.__company = desired_value
 
-        @company.setter
+        @model.setter
         def model(self, desired_value):
             self.__model = desired_value
 
-        @company.setter
+        @portable.setter
         def portable(self, desired_value):
             self.__portable = desired_value
 
-        @company.setter
+        @condition.setter
         def condition(self, desired_value):
             self.__condition = desired_value
 
-        @company.setter
+        @kind.setter
         def kind(self, desired_value):
             self.__kind = desired_value
 
-        @company.setter
+        @operating_system.setter
         def operating_system(self, desired_value):
             self.__operating_system = desired_value
 
