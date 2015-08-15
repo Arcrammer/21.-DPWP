@@ -13,6 +13,7 @@ class Welcome(object):
         self.main_stylesheet_path = "Main.css"
 
     def render(self):
+        ''' Return the response data '''
         return open("index.html","r").read().format(**locals())
 
 class DeviceList(object):
@@ -23,4 +24,5 @@ class DeviceList(object):
         print(devices)
 
     def render(self):
+        ''' Return the response data '''
         return open("device_list.html","r").read().format(**locals())

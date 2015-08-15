@@ -75,3 +75,22 @@ class Device(object):
         @age.setter
         def age(self, desired_value):
             self.__age = desired_value
+
+# End of 'Device' Definition
+
+class DeviceData(object):
+    def __init__(self, devices):
+        self.__devices = devices
+
+    def add_device(self, device):
+        self.__devices.append(device)
+    
+
+    def average(self):
+        ''' Find the average age among the 'Device' objects '''
+        ages = []
+        total = float()
+        for device in self.__devices:
+            ages.append(device.age)
+            total += device.age
+        return total / len(ages)
