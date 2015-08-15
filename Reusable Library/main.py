@@ -32,54 +32,32 @@ class MainHandler(webapp2.RequestHandler):
         # Create an array to hold each Device() object
         devices = []
 
-        if not self.request.POST: # TODO: Remove the 'not' keyword before production. This allows a preview of the page without requiring submission of POST data by reversing the conditional
-            # The user has provided some device data; We'll make Device() objects from it
-            
-            # Create an instance of the welcome page
-            welcome_page = Welcome()
-            
-            # Write the response to the browser
-            self.response.write(welcome_page.render())
-        else:
-            # TODO: Allow the user to view devices without requiring input (through a link or button, pherhaps?)
-            # Create some Device() objects beginning with an iPhone
-            iPhone = Device()
-            iPhone.company = "Apple"
-            iPhone.model = "iPhone 6 Plus"
-            iPhone.portable = True
-            iPhone.condition = "New"
-            iPhone.kind = "Smartphone"
-            iPhone.operating_system = "iOS 9 Beta 5"
-            iPhone.age = 0.6
-            devices.append(iPhone)
+        if self.request.GET:
+            # The user has provided device data through the form
+            print("The user has provided device data")
 
-            # Let's make an iPad, too
-            iPad = Device()
-            iPad.company = "Apple"
-            iPad.model = "iPad"
-            iPad.portable = True
-            iPad.condition = "New"
-            iPad.kind = "Tablet"
-            iPad.operating_system = "iOS 8"
-            iPad.age = 1
-            devices.append(iPad)
-
-            # For good measure we'll make a desktop machine
-            iMac = Device()
-            iMac.company = "Apple"
-            iMac.model = "iMac with 5K Retina Display"
-            iMac.portable = False
-            iMac.condition = "New"
-            iMac.kind = "Desktop"
-            iMac.operating_system = "10.11 El Capitan Beta 4"
-            iMac.age = 1.4
-            devices.append(iMac)
+            # Create a Device() object with the form data provided
+            user_device = Device()
+            user_device.company = self.request.GET["company"]
+            user_device.model = self.request.GET["model"]
+            user_device.portable = self.request.GET["portable"]
+            user_device.condition = self.request.GET["condition"]
+            user_device.kind = self.request.GET["kind"]
+            user_device.operating_system = self.request.GET["operating_system"]
+            user_device.age = self.request.GET["age"]
+            devices.append(user_device)
 
             # Create an instance of the devices page
             devices_page = DeviceList(devices)
-    
+
             # Write the response to the browser
             self.response.write(devices_page.render())
+        else:
+            # The user has not provided any device data of their own, so we'll allow them to do so with a form
+            print("The user now has the option to provide device data")
+
+            # Write the response to the browser
+            self.response.write(Welcome().render()) # Create an instance of the welcome page then send it to the browser
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

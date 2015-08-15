@@ -101,10 +101,12 @@ class DeviceData(object):
             list_source += "<tr>" # Create a 'tr' element
             list_source += "<td>%s</td>" % ( device.company )
             list_source += "<td>%s</td>" % ( device.model )
-            if device.portable:
+            if device.portable == True:
                 list_source += "<td>Yes</td>"
-            else:
+            elif device.portable == False:
                 list_source += "<td>No</td>"
+            else:
+                list_source += "<td>%s</td>" % ( device.portable )
             list_source += "<td>%s</td>" % ( device.condition )
             list_source += "<td>%s</td>" % ( device.kind )
             list_source += "<td>%s</td>" % ( device.operating_system )

@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="Assets/{self.main_stylesheet_path}">
   </head>
   <body>
-    <!-- This should be a form allowing the user to provide their own device objects -->
     <header>Welcome Page</header>
+    <form method="get">
+      <input type="text" name="company" placeholder="Company">
+      <input type="text" name="model" placeholder="Model">
+      <input type="text" name="portable" placeholder="Is it portable?">
+      <input type="text" name="condition" placeholder="What's its' condition?">
+      <input type="text" name="kind" placeholder="Type of Device">
+      <input type="text" name="operating_system" placeholder="Operating System">
+      <input type="number" step="0.1" min="0" name="age" placeholder="Age">
+      <input type="submit" name="submitted" value="Done">
+    </form>
   </body>
 </html>
