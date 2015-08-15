@@ -40,6 +40,7 @@ class MainHandler(webapp2.RequestHandler):
         iPhone.condition = "New"
         iPhone.kind = "Smartphone"
         iPhone.operating_system = "iOS 9 Beta 5"
+        iPhone.age = 0.6
         devices.append(iPhone)
 
         # Let's make an iPad, too
@@ -50,6 +51,7 @@ class MainHandler(webapp2.RequestHandler):
         iPad.condition = "New"
         iPad.kind = "Tablet"
         iPad.operating_system = "iOS 8"
+        iPad.age = 1
         devices.append(iPad)
 
         # For good measure we'll make a desktop machine
@@ -60,6 +62,7 @@ class MainHandler(webapp2.RequestHandler):
         iMac.condition = "New"
         iMac.kind = "Desktop"
         iMac.operating_system = "10.11 El Capitan Beta 4"
+        iMac.age = 1.4
         devices.append(iMac)
 
         # Create an instance of the devices page

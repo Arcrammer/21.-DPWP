@@ -15,6 +15,7 @@ class Device(object):
         self.__condition = None # Condition of the device (Old, New, Okay, Pitiful, Shattered like an iPhone)
         self.__kind = None # Type of device (Tablet, Smartphone, Laptop, Desktop)
         self.__operating_system = None # Operating system of the device (Fire OS, Android, iOS, Windows, Linux, OS X)
+        self.__age = None # Integer representing the amount of years the device has accumulated age
 
         # Getters
         @property
@@ -41,6 +42,11 @@ class Device(object):
         def operating_system(self):
             return self.__operating_system
 
+        @property
+        def age(self):
+            return self.__age
+        
+
         # Setters
         @company.setter
         def company(self, desired_value):
@@ -66,3 +72,6 @@ class Device(object):
         def operating_system(self, desired_value):
             self.__operating_system = desired_value
 
+        @age.setter
+        def age(self, desired_value):
+            self.__age = desired_value
