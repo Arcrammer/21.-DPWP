@@ -33,7 +33,7 @@ class MainHandler(webapp2.RequestHandler):
         devices = []
 
         if self.request.POST:
-            # The user has provided some device data; We'll make Device() objects
+            # The user has provided some device data; We'll make Device() objects from it
             pass
         else:
             # Create some Device() objects beginning with an iPhone
@@ -46,7 +46,7 @@ class MainHandler(webapp2.RequestHandler):
             iPhone.operating_system = "iOS 9 Beta 5"
             iPhone.age = 0.6
             devices.append(iPhone)
-    
+
             # Let's make an iPad, too
             iPad = Device()
             iPad.company = "Apple"
@@ -57,7 +57,7 @@ class MainHandler(webapp2.RequestHandler):
             iPad.operating_system = "iOS 8"
             iPad.age = 1
             devices.append(iPad)
-    
+
             # For good measure we'll make a desktop machine
             iMac = Device()
             iMac.company = "Apple"
