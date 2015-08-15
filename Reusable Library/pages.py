@@ -14,3 +14,13 @@ class Welcome(object):
 
     def render(self):
         return open("index.html","r").read().format(**locals())
+
+class DeviceList(object):
+    def __init__(self, devices):
+        self.title = "Some Page"
+        self.main_stylesheet_path = "Main.css"
+        print("Devices --------------------------")
+        print(devices)
+
+    def render(self):
+        return open("device_list.html","r").read().format(**locals())
