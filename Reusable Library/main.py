@@ -32,10 +32,16 @@ class MainHandler(webapp2.RequestHandler):
         # Create an array to hold each Device() object
         devices = []
 
-        if self.request.POST:
+        if not self.request.POST: # TODO: Remove the 'not' keyword before production. This allows a preview of the page without requiring submission of POST data by reversing the conditional
             # The user has provided some device data; We'll make Device() objects from it
-            pass
+            
+            # Create an instance of the welcome page
+            welcome_page = Welcome()
+            
+            # Write the response to the browser
+            self.response.write(welcome_page.render())
         else:
+            # TODO: Allow the user to view devices without requiring input (through a link or button, pherhaps?)
             # Create some Device() objects beginning with an iPhone
             iPhone = Device()
             iPhone.company = "Apple"
@@ -69,11 +75,11 @@ class MainHandler(webapp2.RequestHandler):
             iMac.age = 1.4
             devices.append(iMac)
 
-        # Create an instance of the devices page
-        devices_page = DeviceList(devices)
-
-        # Write the response to the browser
-        self.response.write(devices_page.render())
+            # Create an instance of the devices page
+            devices_page = DeviceList(devices)
+    
+            # Write the response to the browser
+            self.response.write(devices_page.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

@@ -11,7 +11,7 @@ from library import DeviceData
 
 class Welcome(object):
     def __init__(self):
-        self.title = "Some Page"
+        self.title = "Device Dashboard // Welcome"
         self.main_stylesheet_path = "Main.css"
 
     def render(self):
@@ -20,7 +20,7 @@ class Welcome(object):
 
 class DeviceList(object):
     def __init__(self, devices):
-        self.title = "Some Page"
+        self.title = "Device Dashboard // Devices"
         self.main_stylesheet_path = "Main.css"
         self.devices = devices
         self.device_rows = DeviceData(devices).device_rows() # Ask the utility class for an HTML list of data for each device
