@@ -62,8 +62,11 @@ class MainHandler(webapp2.RequestHandler):
         iMac.operating_system = "10.11 El Capitan Beta 4"
         devices.append(iMac)
 
+        # Create an instance of the devices page
+        devices_page = DeviceList(devices)
+
         # Write the response to the browser
-        self.response.write(DeviceList(devices).render())
+        self.response.write(devices_page.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
