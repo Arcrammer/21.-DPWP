@@ -34,7 +34,6 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET:
             # The user has provided device data through the form
-            print("The user has provided device data")
 
             # Create a Device() object with the form data provided
             user_device = Device()
@@ -54,7 +53,6 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(devices_page.render())
         else:
             # The user has not provided any device data of their own, so we'll allow them to do so with a form
-            print("The user now has the option to provide device data")
 
             # Write the response to the browser
             self.response.write(Welcome().render()) # Create an instance of the welcome page then send it to the browser
