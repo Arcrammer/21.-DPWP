@@ -5,5 +5,96 @@
 
 /* Structure */
 body {
-  background-color: white;
+  background-color: black;
+}
+
+/* Form */
+form {
+  margin: 0 auto;
+  width: 35%;
+}
+
+input[type="text"], input[type="number"] {
+  background-color: transparent;
+  border: 4px solid #290C46;
+  border-radius: 10px;
+  color: #fbfbfb;
+  font-family: Avenir Next;
+  font-size: 1.15em;
+  letter-spacing: 1.5px;
+  margin: 3.5% 0;
+  outline: none;
+  padding: 6.5% 0;
+  position: relative;
+  left: -5px; /* Truly center */
+  text-transform: uppercase;
+  text-align: center;
+  transition: border-color 500ms;
+  width: 100%;
+}
+
+input[type="text"]:focus, input[type="text"]:hover, input[type="number"]:focus, input[type="number"]:hover {
+  border-color: #9436F1;
+}
+
+.button {
+  background-color: black;
+  border: 4px solid #480D2F;
+  border-radius: 5px;
+  color: #ACACAC;
+  cursor: pointer;
+  font-size: 1.25em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 10% 0;
+  margin-left: 15%;
+  outline: none;
+  padding: 6.5% 0;
+  text-transform: uppercase;
+  transition: background-color 250ms, border-color 500ms;
+  width: 65%;
+}
+
+button.button {
+  font-size: 0.75em;
+  padding: 2.25% 0;
+  width: 15%;
+}
+
+.button:hover {
+  background-color: #FF2BA5;
+  border-color: #B1337C;
+  color: white;
+}
+
+.button:active {
+  border-color: #750044;
+  background-color: #750044;
+}
+
+/* Table */
+table {
+  background-color: #fafafa;
+  border: 3px solid gray;
+  margin: 6.5% auto;
+  padding: 1% 1.5%;
+  width: 85%;
+}
+
+tr:first-of-type {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+tr {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  height: 50px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid silver;[]
 }

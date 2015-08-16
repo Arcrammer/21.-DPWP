@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="Assets/{self.main_stylesheet_path}">
   </head>
   <body>
-    <header>Welcome Page</header>
     <form method="get">
-      <input type="text" name="company" placeholder="Company">
-      <input type="text" name="model" placeholder="Model">
-      <input type="text" name="portable" placeholder="Is it portable?">
-      <input type="text" name="condition" placeholder="What's its' condition?">
-      <input type="text" name="kind" placeholder="Type of Device">
-      <input type="text" name="operating_system" placeholder="Operating System">
-      <input type="number" step="0.1" min="0" name="age" placeholder="Age">
-      <input type="submit" name="submitted" value="Done">
+      <input type="text" name="company" id="company" autocomplete="off" placeholder="Company" class="device-data-field" value="Apple">
+      <input type="text" name="model" id="model" autocomplete="off" placeholder="Model" class="device-data-field" value="iPhone 6 Plus">
+      <input type="text" name="portable" id="portable" autocomplete="off" placeholder="Is it portable?" class="device-data-field" value="Yes">
+      <input type="text" name="condition" id="condition" autocomplete="off" placeholder="What's its' condition?" class="device-data-field" value="Yes">
+      <input type="text" name="kind" id="kind" autocomplete="off" placeholder="Type of Device" class="device-data-field" value="Smartphone">
+      <input type="text" name="operating_system" id="operating_system" autocomplete="off" placeholder="Operating System" class="device-data-field" value="iOS 9 Beta 5">
+      <input type="number" step="0.1" min="0" name="age" id="age" placeholder="Age" class="device-data-field" value="0.5">
+      <input type="submit" name="submitted" class="button" value="Done">
     </form>
+    <!-- Scripts -->
+    <script src="Assets/Main.js"></script>
   </body>
 </html>

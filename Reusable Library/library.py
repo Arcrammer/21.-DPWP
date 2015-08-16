@@ -110,11 +110,11 @@ class DeviceData(object):
             list_source += "<td>%s</td>" % ( device.condition )
             list_source += "<td>%s</td>" % ( device.kind )
             list_source += "<td>%s</td>" % ( device.operating_system )
-            if device.age >= 1.1: # Just some pluralisation and word appropriation
-                list_source += "<td>%s Years</td>" % ( device.age )
-            elif device.age == 1:
+            if device.age <= 0.9: # Just some pluralisation and word appropriation
+                list_source += "<td>%s Months</td>" % ( device.age )
+            elif device.age > 1.0:
                 list_source += "<td>%s Year</td>" % ( device.age )
-            else:
-                list_source += "<td>%s Months</td>" % ( str(device.age).split(".")[-1] ) # Remove the leading 0
+            elif device.age == 1.0:
+                list_source += "<td>%s Year</td>" % ( str(device.age).split(".")[-1] ) # Remove the leading 0
             list_source += "</tr>" # Close the 'tr' element for this device
         return list_source # Return the rows for all of the devices
