@@ -4,6 +4,10 @@
     Alexander Rhett Crammer  */
 
 /* Structure */
+body {
+  background-color: #272727;
+}
+
 .container {
   margin: 1% auto;
   width: 80%;
@@ -26,15 +30,36 @@ button {
   margin: 1%;
   outline: none;
   padding: 2.5% 5%;
-  transition: background-color 175ms, border-color 175ms;
+  transition: background-color 175ms, border-color 175ms, color 175ms;
 }
 
 button:hover {
   background-color: #8D8DF5;
   border: 3px solid #ADADFF;
+  /* Webkit */
+  -webkit-animation: buttonPulsation 1s infinite alternate;
 }
 
 button:active {
   background-color: #303075;
-  border-color: #17175F;
+  border-color: #303075;
+  color: #B5B5B5;
+  transition: background-color 125ms, border-color 125ms, color 125ms;
+  /* Webkit */
+  -webkit-animation: none;
+}
+
+/* Button Pulsation in Webkit Browsers; This works on Windows but it didn't on my Mac */
+@-webkit-keyframes buttonPulsation {
+  0% {
+    background-color: #7474F9;
+    border-color: #ADADFF;
+  }
+  50% {
+    background-color: #8D8DF5;
+  }
+  100% {
+    background-color: #7474F9;
+    border-color: #ADADFF;
+  }
 }
