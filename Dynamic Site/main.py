@@ -23,10 +23,12 @@
 #
 import webapp2
 from pages import * # Import all classes from 'pages.py'
+from data import * # Import all classes from 'data.py'
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        welcome_page = Page() # Create a 'Page' instance
+        welcome_page = ContentPage() # Create a 'Page' instance
+        # IMPORTANT: Content from 'data.py' should be delegated to 'pages.py' here; Only this object should access MainHandler.request
         self.response.write(welcome_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([

@@ -9,12 +9,12 @@
 #
 class Page(object):
     def __init__(self):
-        self._title = "Welcome" # Title of this page
-        self._view_name = "Welcome" # Seemingly pointless name of the view; Allow other classes to redefine the desired views' name
+        self._title = None # Title of this page
+        self._view_name = "Welcome" # Name of the view, used for finding the template
 
     def render_view(self):
         ''' Return the view to the client '''
-        self._view = open(str("Pages/{view_name}.html").format(view_name=self._view_name)) # Open the template
+        self._view = open(str("Pages/{view_name}.html").format(view_name=self._view_name.lower())) # Open the template
         return self._view.read().format(**locals()) # Read the template, interpolate local variables in the data, then return it
 
     # Getters
@@ -29,5 +29,6 @@ class Page(object):
 
 class ContentPage(Page):
     def __init__(self):
+        # Polymorphic properties
         self._title = "Content Page"
         self._view_name = "Content"
