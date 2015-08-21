@@ -1,0 +1,40 @@
+/*  Main.css
+    Friday, 21 August, 2015
+    Dynamic Site
+    Alexander Rhett Crammer  */
+
+/* Structure */
+.container {
+  margin: 1% auto;
+  width: 80%;
+}
+
+/* Buttons */
+.buttons {
+  text-align: center;
+}
+
+button {
+  background-color: #6565F3;
+  border: 3px solid #9A9AFF;
+  color: white;
+  cursor: pointer;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  letter-spacing: 0.75px;
+  margin: 1%;
+  outline: none;
+  padding: 2.5% 5%;
+  transition: background-color 175ms, border-color 175ms;
+}
+
+button:hover {
+  background-color: #8D8DF5;
+  border: 3px solid #ADADFF;
+}
+
+button:active {
+  background-color: #303075;
+  border-color: #17175F;
+}
