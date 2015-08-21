@@ -22,10 +22,12 @@
 # limitations under the License.
 #
 import webapp2
+from pages import * # Import all classes from 'pages.py'
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        welcome_page = Page() # Create a 'Page' instance
+        self.response.write(welcome_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
