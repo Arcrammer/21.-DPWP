@@ -63,6 +63,24 @@ class MainHandler(webapp2.RequestHandler):
             work_of_art.materials_used = "Oil on Canvas"
             work_of_art.image_name = "StarryNight.jpg"
             response_page.art = work_of_art
+        elif self.request.get("work") == "Persistence-of-Memory":
+            response_page.title = "The Persistence of Memory"
+            work_of_art.artist = "Salvador Dal&#xED;"
+            work_of_art.time = "1931"
+            work_of_art.description = "Dal&#xED; used oil on canvas to portray his perception of softness and hardness. He'd often used ants to resemble death and rotting."
+            work_of_art.current_location = "Museum of Modern Art, New York"
+            work_of_art.materials_used = "Oil on Canvas"
+            work_of_art.image_name = "PresistenceOfMemory.jpg"
+            response_page.art = work_of_art
+        elif self.request.get("work") == "Girl-With-a-Pearl-Earring":
+            response_page.title = "Girl with a Pearl Earring"
+            work_of_art.artist = "Johannes Vermeer"
+            work_of_art.time = "1665"
+            work_of_art.description = "Tronie by Johannes Vermeer created 1665."
+            work_of_art.current_location = "Mauritshuis, The Hague"
+            work_of_art.materials_used = "Oil on Canvas"
+            work_of_art.image_name = "GirlWithPearlEarring.jpg"
+            response_page.art = work_of_art
         self.response.write(response_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([
