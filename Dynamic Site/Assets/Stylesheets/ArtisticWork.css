@@ -1,0 +1,16 @@
+/*  ArtisticWork.css
+    Saturday, 22 August, 2015
+    Dynamic Site
+    Alexander Rhett Crammer  */
+
+/* Informative Pages */
+p {
+  float: right;
+  margin: 2.5% 6.5%;
+  width: 35%;
+}
+
+img {
+  float: left;
+  width: 50%;
+}

@@ -19,16 +19,32 @@ class Page(object):
 
     # Getters
     @property
+    def title(self):
+        return self._title
+
+    @property
     def view_name(self):
         return self._view_name
 
     # Setters
-    @view_name.setter
-    def view_name(self, new_name):
-      self._view_name = new_name
+    @title.setter
+    def title(self, new_title):
+        self._title = new_title
 
-class ContentPage(Page):
+    @view_name.setter
+    def view_name(self, new_view_name):
+        self._view_name = new_view_name
+
+class WorkPage(Page):
     def __init__(self):
-        # Polymorphic properties
-        self._title = "Content Page"
-        self._view_name = "Content"
+        self._art = None # Art objects for the page
+
+    # Getters
+    @property
+    def art(self):
+        return art
+
+    # Setters
+    @art.setter
+    def art(self, new_art):
+        self._art = new_art

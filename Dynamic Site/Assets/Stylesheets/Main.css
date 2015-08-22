@@ -3,14 +3,29 @@
     Dynamic Site
     Alexander Rhett Crammer  */
 
+/* Master Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
 /* Structure */
 body {
-  background-color: #272727;
+  background-color: #151515;
 }
 
 .container {
   margin: 1% auto;
   width: 80%;
+}
+
+/* Content */
+p {
+  color: white;
+  font-family: "Source Sans Pro";
+  font-weight: 100;
+  line-height: 185%;
+  letter-spacing: 0.5px;
 }
 
 /* Buttons */
@@ -27,9 +42,9 @@ button {
   font-size: 1em;
   font-weight: 100;
   letter-spacing: 0.75px;
-  margin: 1%;
+  margin: 1% 0.25%;
   outline: none;
-  padding: 2.5% 5%;
+  padding: 1.5% 2.5%;
   transition: background-color 175ms, border-color 175ms, color 175ms;
 }
 
@@ -44,7 +59,7 @@ button:active {
   background-color: #303075;
   border-color: #303075;
   color: #B5B5B5;
-  transition: background-color 125ms, border-color 125ms, color 125ms;
+  transition: background-color 175ms, border-color 175ms, color 175ms;
   /* Webkit */
   -webkit-animation: none;
 }
