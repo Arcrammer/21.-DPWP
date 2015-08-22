@@ -54,6 +54,15 @@ class MainHandler(webapp2.RequestHandler):
             work_of_art.materials_used = "Tempera on Canvas"
             work_of_art.image_name = "BirthOfVenus.jpg"
             response_page.art = work_of_art
+        elif self.request.get("work") == "Starry-Night":
+            response_page.title = "The Starry Night"
+            work_of_art.artist = "Vincent van Gogh"
+            work_of_art.time = "Circa 1889"
+            work_of_art.description = "Originally titled &quot;La Nuit Entoill&eacute;&quot;, this is pherhaps Van Gogh's most well known rendition of the view from his asylum room at Saint-R&eacute;my-de-Provence."
+            work_of_art.current_location = "Museum of Modern Art, New York"
+            work_of_art.materials_used = "Oil on Canvas"
+            work_of_art.image_name = "StarryNight.jpg"
+            response_page.art = work_of_art
         self.response.write(response_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([
