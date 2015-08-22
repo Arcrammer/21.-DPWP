@@ -27,60 +27,59 @@ from pages import * # Import all classes from 'pages.py'
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        # IMPORTANT: Content from 'data.py' should be delegated to 'pages.py' here; Only this object should access MainHandler.request
-        if self.request.GET:
-            # The user has submitted GET data so we'll show them information of a well known artistic work
-            response_page = FamousWorkPage() # Create a 'FamousWorkPage' instance
-            work_of_art = Art() # We'll pass one of these to the 'WorkPage' object
-        else:
+        if not self.request.GET:
             # The user has not requested to view information about a well known work of art, so we'll show them the default 'Credit' page
             response_page = Page() # Create a 'WorkPage' instance
             response_page.title = "Credit"
-        if self.request.get("work") == "Mona-Lisa":
-            response_page.title = "Mona Lisa"
-            work_of_art.artist = "Leonardo da Vinci"
-            work_of_art.time = "Early 1500's"
-            work_of_art.description = "Portrait of Lisa Gherardini, wife of Francesco del Giocondo, referred to as Monna Lisa, The Gioconda or The Joconde. Painted in Florence, Italy in the early 1500's."
-            work_of_art.current_location = "La Louvre, Paris"
-            work_of_art.materials_used = "Oil Paint on Poplar Wood"
-            work_of_art.image_name = "MonaLisa.jpg"
-            response_page.art = work_of_art
-        elif self.request.get("work") == "Birth-of-Venus":
-            response_page.title = "The Birth of Venus"
-            work_of_art.artist = "Sandro Botticelli"
-            work_of_art.time = "Circa 1485"
-            work_of_art.description = "Undoubtedly the most well known and appreciated work of Italy's 15th century, this work follows the theme from Ovid's Metamorphoses."
-            work_of_art.current_location = "Uffizi Gallery, Florence"
-            work_of_art.materials_used = "Tempera on Canvas"
-            work_of_art.image_name = "BirthOfVenus.jpg"
-            response_page.art = work_of_art
-        elif self.request.get("work") == "Starry-Night":
-            response_page.title = "The Starry Night"
-            work_of_art.artist = "Vincent van Gogh"
-            work_of_art.time = "Circa 1889"
-            work_of_art.description = "Originally titled &quot;La Nuit Entoill&eacute;&quot;, this is pherhaps Van Gogh's most well known rendition of the view from his asylum room at Saint-R&eacute;my-de-Provence."
-            work_of_art.current_location = "Museum of Modern Art, New York"
-            work_of_art.materials_used = "Oil on Canvas"
-            work_of_art.image_name = "StarryNight.jpg"
-            response_page.art = work_of_art
-        elif self.request.get("work") == "Persistence-of-Memory":
-            response_page.title = "The Persistence of Memory"
-            work_of_art.artist = "Salvador Dal&#xED;"
-            work_of_art.time = "1931"
-            work_of_art.description = "Dal&#xED; used oil on canvas to portray his perception of softness and hardness. He'd often used ants to resemble death and rotting."
-            work_of_art.current_location = "Museum of Modern Art, New York"
-            work_of_art.materials_used = "Oil on Canvas"
-            work_of_art.image_name = "PresistenceOfMemory.jpg"
-            response_page.art = work_of_art
-        elif self.request.get("work") == "Girl-With-a-Pearl-Earring":
-            response_page.title = "Girl with a Pearl Earring"
-            work_of_art.artist = "Johannes Vermeer"
-            work_of_art.time = "1665"
-            work_of_art.description = "Tronie by Johannes Vermeer created 1665."
-            work_of_art.current_location = "Mauritshuis, The Hague"
-            work_of_art.materials_used = "Oil on Canvas"
-            work_of_art.image_name = "GirlWithPearlEarring.jpg"
-            response_page.art = work_of_art
+        else:
+            # The user has submitted GET data so we'll show them information of a well known artistic work
+            response_page = FamousWorkPage() # Create a 'FamousWorkPage' instance
+            work_of_art = Art() # We'll pass one of these to the 'WorkPage' object
+            if self.request.get("work") == "Mona-Lisa":
+                response_page.title = "Mona Lisa"
+                work_of_art.artist = "Leonardo da Vinci"
+                work_of_art.time = "Early 1500's"
+                work_of_art.description = "Portrait of Lisa Gherardini, wife of Francesco del Giocondo, referred to as Monna Lisa, The Gioconda or The Joconde. Painted in Florence, Italy in the early 1500's."
+                work_of_art.current_location = "La Louvre, Paris"
+                work_of_art.materials_used = "Oil Paint on Poplar Wood"
+                work_of_art.image_name = "MonaLisa.jpg"
+                response_page.art = work_of_art
+            elif self.request.get("work") == "Birth-of-Venus":
+                response_page.title = "The Birth of Venus"
+                work_of_art.artist = "Sandro Botticelli"
+                work_of_art.time = "Circa 1485"
+                work_of_art.description = "Undoubtedly the most well known and appreciated work of Italy's 15th century, this work follows the theme from Ovid's Metamorphoses."
+                work_of_art.current_location = "Uffizi Gallery, Florence"
+                work_of_art.materials_used = "Tempera on Canvas"
+                work_of_art.image_name = "BirthOfVenus.jpg"
+                response_page.art = work_of_art
+            elif self.request.get("work") == "Starry-Night":
+                response_page.title = "The Starry Night"
+                work_of_art.artist = "Vincent van Gogh"
+                work_of_art.time = "Circa 1889"
+                work_of_art.description = "Originally titled &quot;La Nuit Entoill&eacute;&quot;, this is pherhaps Van Gogh's most well known rendition of the view from his asylum room at Saint-R&eacute;my-de-Provence."
+                work_of_art.current_location = "Museum of Modern Art, New York"
+                work_of_art.materials_used = "Oil on Canvas"
+                work_of_art.image_name = "StarryNight.jpg"
+                response_page.art = work_of_art
+            elif self.request.get("work") == "Persistence-of-Memory":
+                response_page.title = "The Persistence of Memory"
+                work_of_art.artist = "Salvador Dal&#xED;"
+                work_of_art.time = "1931"
+                work_of_art.description = "Dal&#xED; used oil on canvas to portray his perception of softness and hardness. He'd often used ants to resemble death and rotting."
+                work_of_art.current_location = "Museum of Modern Art, New York"
+                work_of_art.materials_used = "Oil on Canvas"
+                work_of_art.image_name = "PresistenceOfMemory.jpg"
+                response_page.art = work_of_art
+            elif self.request.get("work") == "Girl-With-a-Pearl-Earring":
+                response_page.title = "Girl with a Pearl Earring"
+                work_of_art.artist = "Johannes Vermeer"
+                work_of_art.time = "1665"
+                work_of_art.description = "Tronie by Johannes Vermeer created 1665."
+                work_of_art.current_location = "Mauritshuis, The Hague"
+                work_of_art.materials_used = "Oil on Canvas"
+                work_of_art.image_name = "GirlWithPearlEarring.jpg"
+                response_page.art = work_of_art
         self.response.write(response_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([
