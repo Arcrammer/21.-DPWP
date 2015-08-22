@@ -4,6 +4,7 @@
     <title>Dynamic Site / {self._title}</title>
     <!-- Links -->
     <link rel="stylesheet" href="Assets/Stylesheets/Main.css">
+    <link rel="stylesheet" href="Assets/Stylesheets/ArtisticWork.css">
   </head>
   <body>
     <div class="buttons">
@@ -13,7 +14,7 @@
       <a href="?work=Persistence-of-Memory"><button>The Persistence of Memory</button></a>
       <a href="?work=Girl-With-a-Pearl-Earring"><button>Girl With a Pearl Earring</button></a>
     </div> <!-- .buttons -->
-    <div class="container">
-    </div> <!-- .container -->
+    <img src="Assets/Images/{self._art.image_name}" alt="{self._art.image_name}">
+    <p>{self._art.description}</p>
   </body>
 </html>

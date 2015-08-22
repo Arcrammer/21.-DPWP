@@ -19,6 +19,7 @@ class Work(object):
 class Art(Work):
     def __init__(self):
         self._artist = None # Name of the artist who'd created the work
-        self.description = None # Brief explanation of the work
+        self._description = None # Brief explanation of the work
+        self._current_location = None # Where the work is currently physically located
         self._materials_used = None # Materials the art was made with, e.g. Wood, Paint, and Stone.
         self._image_path = None # Path to the image
