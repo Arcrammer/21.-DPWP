@@ -32,7 +32,6 @@ class Work(object):
     def art_name(self, new_art_name):
         ''' Set the name of the work requested; Set the appropriate properties to self._art '''
         self._art_name = new_art_name
-        # TODO: Show all of these seven properties in the view
         if self._art_name == "Mona-Lisa":
             self._art._title = self._art_name
             self._art._artist = "Leonardo da Vinci"
