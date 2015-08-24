@@ -75,10 +75,10 @@ class Work(object):
 
 class Art(Work):
     def __init__(self):
-        self.title = None # This should have been inherited?
-        self.artist = None # Name of the artist who'd created the work
-        self.time = None # Year the work was completed near
-        self.description = None # Brief explanation of the work
-        self.current_location = None # Where the work is currently physically located
-        self.materials_used = None # Materials the art was made with, e.g. Wood, Paint, and Stone.
-        self.image_name = None # Path to the image
+        self._title = None # This should have been inherited?
+        self._artist = None # Name of the artist who'd created the work
+        self._time = None # Year the work was completed near
+        self._description = None # Brief explanation of the work
+        self._current_location = None # Where the work is currently physically located
+        self._materials_used = None # Materials the art was made with, e.g. Wood, Paint, and Stone.
+        self._image_name = None # Path to the image

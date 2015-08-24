@@ -36,9 +36,8 @@ class MainHandler(webapp2.RequestHandler):
             # The user has submitted GET data so we'll show them information of a well known artistic work
             response_page = FamousWorkPage() # Create a 'FamousWorkPage' instance
             work_of_art = Work() # We'll pass one of these to the 'FamousWorkPage' object
-            work_of_art.art_name = self.request.get("work")
-            response_page.art = work_of_art.art
-            print(work_of_art.art_name)
+            work_of_art.art_name = self.request.get("work") # Set the 'Art' objects' properties
+            response_page.art = work_of_art.art # Pass the art object from the model to the view
         self.response.write(response_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([
