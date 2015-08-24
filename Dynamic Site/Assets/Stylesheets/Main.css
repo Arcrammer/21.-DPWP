@@ -22,12 +22,15 @@ body {
 }
 
 /* Content */
-p {
+h1, h4, p {
   color: white;
   font-family: "Source Sans Pro";
   font-weight: 100;
-  line-height: 185%;
   letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 185%;
 }
 
 /* Buttons */

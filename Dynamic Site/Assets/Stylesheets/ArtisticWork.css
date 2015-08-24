@@ -4,10 +4,26 @@
     Alexander Rhett Crammer  */
 
 /* Informative Pages */
-p {
+h1, h4, p {
   float: right;
-  margin: 2.5% 6.5%;
+  margin: 0.75% 6.5%;
   width: 35%;
+}
+
+h1 {
+  font-size: 1.25em;
+  margin-top: 2.5%;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 2.5% 6.5%;
 }
 
 img {
