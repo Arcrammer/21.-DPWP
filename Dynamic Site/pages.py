@@ -6,14 +6,14 @@
 #   Alexander Rhett Crammer
 #   Full Sail University
 # --------------------------
-#
+# VIEWS
 class Page(object):
     def __init__(self):
         self._title = None # Title of this page
 
     def render_view(self):
         ''' Return the view to the client '''
-        return open("Pages/Credit.html").read() # Read the template then return it
+        return open("Pages/Credit.html").read().format(**locals()) # Read the template, interpolate local variable values, then return it
 
     # Getters
     @property
@@ -30,7 +30,7 @@ class FamousWorkPage(Page):
         self._art = None # Art objects for the page
 
     def render_view(self):
-        # Render the view with properties local to this object
+        ''' Render the view with properties local to this object '''
         return open("Pages/Content.html").read().format(**locals()) # Open the template, read the page to a string, then interpolate this instances' properties and return it
 
     # Getters
