@@ -36,7 +36,7 @@ class FamousWorkPage(Page):
     # Getters
     @property
     def art(self):
-        return art
+        return self._art
 
     # Setters
     @art.setter

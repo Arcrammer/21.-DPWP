@@ -37,6 +37,8 @@ class MainHandler(webapp2.RequestHandler):
             response_page = FamousWorkPage() # Create a 'FamousWorkPage' instance
             work_of_art = Work() # We'll pass one of these to the 'FamousWorkPage' object
             work_of_art.art_name = self.request.get("work")
+            response_page.art = work_of_art.art
+            print(work_of_art.art_name)
         self.response.write(response_page.render_view()) # Return the view to the client
 
 app = webapp2.WSGIApplication([
