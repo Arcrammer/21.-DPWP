@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dynamic Site / {self._art.title}</title>
+    <title>Dynamic Site / {self._art._title}</title>
     <!-- Links -->
     <link rel="stylesheet" href="Assets/Stylesheets/Main.css">
     <link rel="stylesheet" href="Assets/Stylesheets/ArtisticWork.css">
@@ -14,7 +14,7 @@
       <a href="?work=Persistence-of-Memory"><button>The Persistence of Memory</button></a>
       <a href="?work=Girl-With-a-Pearl-Earring"><button>Girl With a Pearl Earring</button></a>
     </div> <!-- .buttons -->
-    <img src="Assets/Images/{self.art.image_name}" alt="{self.art.image_name}">
-    <p>{self.art.description}</p>
+    <img src="Assets/Images/{self.art._image_name}" alt="{self.art._image_name}">
+    <p>{self.art._description}</p>
   </body>
 </html>
